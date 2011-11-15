@@ -1,0 +1,1543 @@
+	.text
+
+	.globl int_num_handler_0
+int_num_handler_0:
+	movq	$num_handler_str, %rdi
+	movl	$0, %esi
+	callq	panic
+
+	.globl int_num_handler_1
+int_num_handler_1:
+	movq	$num_handler_str, %rdi
+	movl	$1, %esi
+	callq	panic
+
+	.globl int_num_handler_2
+int_num_handler_2:
+	movq	$num_handler_str, %rdi
+	movl	$2, %esi
+	callq	panic
+
+	.globl int_num_handler_3
+int_num_handler_3:
+	movq	$num_handler_str, %rdi
+	movl	$3, %esi
+	callq	panic
+
+	.globl int_num_handler_4
+int_num_handler_4:
+	movq	$num_handler_str, %rdi
+	movl	$4, %esi
+	callq	panic
+
+	.globl int_num_handler_5
+int_num_handler_5:
+	movq	$num_handler_str, %rdi
+	movl	$5, %esi
+	callq	panic
+
+	.globl int_num_handler_6
+int_num_handler_6:
+	movq	$num_handler_str, %rdi
+	movl	$6, %esi
+	callq	panic
+
+	.globl int_num_handler_7
+int_num_handler_7:
+	movq	$num_handler_str, %rdi
+	movl	$7, %esi
+	callq	panic
+
+	.globl int_num_handler_8
+int_num_handler_8:
+	movq	$num_handler_str, %rdi
+	movl	$8, %esi
+	callq	panic
+
+	.globl int_num_handler_9
+int_num_handler_9:
+	movq	$num_handler_str, %rdi
+	movl	$9, %esi
+	callq	panic
+
+	.globl int_num_handler_10
+int_num_handler_10:
+	movq	$num_handler_str, %rdi
+	movl	$10, %esi
+	callq	panic
+
+	.globl int_num_handler_11
+int_num_handler_11:
+	movq	$num_handler_str, %rdi
+	movl	$11, %esi
+	callq	panic
+
+	.globl int_num_handler_12
+int_num_handler_12:
+	movq	$num_handler_str, %rdi
+	movl	$12, %esi
+	callq	panic
+
+	.globl int_num_handler_13
+int_num_handler_13:
+	movq	$num_handler_str, %rdi
+	movl	$13, %esi
+	callq	panic
+
+	.globl int_num_handler_14
+int_num_handler_14:
+	movq	$num_handler_str, %rdi
+	movl	$14, %esi
+	callq	panic
+
+	.globl int_num_handler_15
+int_num_handler_15:
+	movq	$num_handler_str, %rdi
+	movl	$15, %esi
+	callq	panic
+
+	.globl int_num_handler_16
+int_num_handler_16:
+	movq	$num_handler_str, %rdi
+	movl	$16, %esi
+	callq	panic
+
+	.globl int_num_handler_17
+int_num_handler_17:
+	movq	$num_handler_str, %rdi
+	movl	$17, %esi
+	callq	panic
+
+	.globl int_num_handler_18
+int_num_handler_18:
+	movq	$num_handler_str, %rdi
+	movl	$18, %esi
+	callq	panic
+
+	.globl int_num_handler_19
+int_num_handler_19:
+	movq	$num_handler_str, %rdi
+	movl	$19, %esi
+	callq	panic
+
+	.globl int_num_handler_20
+int_num_handler_20:
+	movq	$num_handler_str, %rdi
+	movl	$20, %esi
+	callq	panic
+
+	.globl int_num_handler_21
+int_num_handler_21:
+	movq	$num_handler_str, %rdi
+	movl	$21, %esi
+	callq	panic
+
+	.globl int_num_handler_22
+int_num_handler_22:
+	movq	$num_handler_str, %rdi
+	movl	$22, %esi
+	callq	panic
+
+	.globl int_num_handler_23
+int_num_handler_23:
+	movq	$num_handler_str, %rdi
+	movl	$23, %esi
+	callq	panic
+
+	.globl int_num_handler_24
+int_num_handler_24:
+	movq	$num_handler_str, %rdi
+	movl	$24, %esi
+	callq	panic
+
+	.globl int_num_handler_25
+int_num_handler_25:
+	movq	$num_handler_str, %rdi
+	movl	$25, %esi
+	callq	panic
+
+	.globl int_num_handler_26
+int_num_handler_26:
+	movq	$num_handler_str, %rdi
+	movl	$26, %esi
+	callq	panic
+
+	.globl int_num_handler_27
+int_num_handler_27:
+	movq	$num_handler_str, %rdi
+	movl	$27, %esi
+	callq	panic
+
+	.globl int_num_handler_28
+int_num_handler_28:
+	movq	$num_handler_str, %rdi
+	movl	$28, %esi
+	callq	panic
+
+	.globl int_num_handler_29
+int_num_handler_29:
+	movq	$num_handler_str, %rdi
+	movl	$29, %esi
+	callq	panic
+
+	.globl int_num_handler_30
+int_num_handler_30:
+	movq	$num_handler_str, %rdi
+	movl	$30, %esi
+	callq	panic
+
+	.globl int_num_handler_31
+int_num_handler_31:
+	movq	$num_handler_str, %rdi
+	movl	$31, %esi
+	callq	panic
+
+	.globl int_num_handler_32
+int_num_handler_32:
+	movq	$num_handler_str, %rdi
+	movl	$32, %esi
+	callq	panic
+
+	.globl int_num_handler_33
+int_num_handler_33:
+	movq	$num_handler_str, %rdi
+	movl	$33, %esi
+	callq	panic
+
+	.globl int_num_handler_34
+int_num_handler_34:
+	movq	$num_handler_str, %rdi
+	movl	$34, %esi
+	callq	panic
+
+	.globl int_num_handler_35
+int_num_handler_35:
+	movq	$num_handler_str, %rdi
+	movl	$35, %esi
+	callq	panic
+
+	.globl int_num_handler_36
+int_num_handler_36:
+	movq	$num_handler_str, %rdi
+	movl	$36, %esi
+	callq	panic
+
+	.globl int_num_handler_37
+int_num_handler_37:
+	movq	$num_handler_str, %rdi
+	movl	$37, %esi
+	callq	panic
+
+	.globl int_num_handler_38
+int_num_handler_38:
+	movq	$num_handler_str, %rdi
+	movl	$38, %esi
+	callq	panic
+
+	.globl int_num_handler_39
+int_num_handler_39:
+	movq	$num_handler_str, %rdi
+	movl	$39, %esi
+	callq	panic
+
+	.globl int_num_handler_40
+int_num_handler_40:
+	movq	$num_handler_str, %rdi
+	movl	$40, %esi
+	callq	panic
+
+	.globl int_num_handler_41
+int_num_handler_41:
+	movq	$num_handler_str, %rdi
+	movl	$41, %esi
+	callq	panic
+
+	.globl int_num_handler_42
+int_num_handler_42:
+	movq	$num_handler_str, %rdi
+	movl	$42, %esi
+	callq	panic
+
+	.globl int_num_handler_43
+int_num_handler_43:
+	movq	$num_handler_str, %rdi
+	movl	$43, %esi
+	callq	panic
+
+	.globl int_num_handler_44
+int_num_handler_44:
+	movq	$num_handler_str, %rdi
+	movl	$44, %esi
+	callq	panic
+
+	.globl int_num_handler_45
+int_num_handler_45:
+	movq	$num_handler_str, %rdi
+	movl	$45, %esi
+	callq	panic
+
+	.globl int_num_handler_46
+int_num_handler_46:
+	movq	$num_handler_str, %rdi
+	movl	$46, %esi
+	callq	panic
+
+	.globl int_num_handler_47
+int_num_handler_47:
+	movq	$num_handler_str, %rdi
+	movl	$47, %esi
+	callq	panic
+
+	.globl int_num_handler_48
+int_num_handler_48:
+	movq	$num_handler_str, %rdi
+	movl	$48, %esi
+	callq	panic
+
+	.globl int_num_handler_49
+int_num_handler_49:
+	movq	$num_handler_str, %rdi
+	movl	$49, %esi
+	callq	panic
+
+	.globl int_num_handler_50
+int_num_handler_50:
+	movq	$num_handler_str, %rdi
+	movl	$50, %esi
+	callq	panic
+
+	.globl int_num_handler_51
+int_num_handler_51:
+	movq	$num_handler_str, %rdi
+	movl	$51, %esi
+	callq	panic
+
+	.globl int_num_handler_52
+int_num_handler_52:
+	movq	$num_handler_str, %rdi
+	movl	$52, %esi
+	callq	panic
+
+	.globl int_num_handler_53
+int_num_handler_53:
+	movq	$num_handler_str, %rdi
+	movl	$53, %esi
+	callq	panic
+
+	.globl int_num_handler_54
+int_num_handler_54:
+	movq	$num_handler_str, %rdi
+	movl	$54, %esi
+	callq	panic
+
+	.globl int_num_handler_55
+int_num_handler_55:
+	movq	$num_handler_str, %rdi
+	movl	$55, %esi
+	callq	panic
+
+	.globl int_num_handler_56
+int_num_handler_56:
+	movq	$num_handler_str, %rdi
+	movl	$56, %esi
+	callq	panic
+
+	.globl int_num_handler_57
+int_num_handler_57:
+	movq	$num_handler_str, %rdi
+	movl	$57, %esi
+	callq	panic
+
+	.globl int_num_handler_58
+int_num_handler_58:
+	movq	$num_handler_str, %rdi
+	movl	$58, %esi
+	callq	panic
+
+	.globl int_num_handler_59
+int_num_handler_59:
+	movq	$num_handler_str, %rdi
+	movl	$59, %esi
+	callq	panic
+
+	.globl int_num_handler_60
+int_num_handler_60:
+	movq	$num_handler_str, %rdi
+	movl	$60, %esi
+	callq	panic
+
+	.globl int_num_handler_61
+int_num_handler_61:
+	movq	$num_handler_str, %rdi
+	movl	$61, %esi
+	callq	panic
+
+	.globl int_num_handler_62
+int_num_handler_62:
+	movq	$num_handler_str, %rdi
+	movl	$62, %esi
+	callq	panic
+
+	.globl int_num_handler_63
+int_num_handler_63:
+	movq	$num_handler_str, %rdi
+	movl	$63, %esi
+	callq	panic
+
+	.globl int_num_handler_64
+int_num_handler_64:
+	movq	$num_handler_str, %rdi
+	movl	$64, %esi
+	callq	panic
+
+	.globl int_num_handler_65
+int_num_handler_65:
+	movq	$num_handler_str, %rdi
+	movl	$65, %esi
+	callq	panic
+
+	.globl int_num_handler_66
+int_num_handler_66:
+	movq	$num_handler_str, %rdi
+	movl	$66, %esi
+	callq	panic
+
+	.globl int_num_handler_67
+int_num_handler_67:
+	movq	$num_handler_str, %rdi
+	movl	$67, %esi
+	callq	panic
+
+	.globl int_num_handler_68
+int_num_handler_68:
+	movq	$num_handler_str, %rdi
+	movl	$68, %esi
+	callq	panic
+
+	.globl int_num_handler_69
+int_num_handler_69:
+	movq	$num_handler_str, %rdi
+	movl	$69, %esi
+	callq	panic
+
+	.globl int_num_handler_70
+int_num_handler_70:
+	movq	$num_handler_str, %rdi
+	movl	$70, %esi
+	callq	panic
+
+	.globl int_num_handler_71
+int_num_handler_71:
+	movq	$num_handler_str, %rdi
+	movl	$71, %esi
+	callq	panic
+
+	.globl int_num_handler_72
+int_num_handler_72:
+	movq	$num_handler_str, %rdi
+	movl	$72, %esi
+	callq	panic
+
+	.globl int_num_handler_73
+int_num_handler_73:
+	movq	$num_handler_str, %rdi
+	movl	$73, %esi
+	callq	panic
+
+	.globl int_num_handler_74
+int_num_handler_74:
+	movq	$num_handler_str, %rdi
+	movl	$74, %esi
+	callq	panic
+
+	.globl int_num_handler_75
+int_num_handler_75:
+	movq	$num_handler_str, %rdi
+	movl	$75, %esi
+	callq	panic
+
+	.globl int_num_handler_76
+int_num_handler_76:
+	movq	$num_handler_str, %rdi
+	movl	$76, %esi
+	callq	panic
+
+	.globl int_num_handler_77
+int_num_handler_77:
+	movq	$num_handler_str, %rdi
+	movl	$77, %esi
+	callq	panic
+
+	.globl int_num_handler_78
+int_num_handler_78:
+	movq	$num_handler_str, %rdi
+	movl	$78, %esi
+	callq	panic
+
+	.globl int_num_handler_79
+int_num_handler_79:
+	movq	$num_handler_str, %rdi
+	movl	$79, %esi
+	callq	panic
+
+	.globl int_num_handler_80
+int_num_handler_80:
+	movq	$num_handler_str, %rdi
+	movl	$80, %esi
+	callq	panic
+
+	.globl int_num_handler_81
+int_num_handler_81:
+	movq	$num_handler_str, %rdi
+	movl	$81, %esi
+	callq	panic
+
+	.globl int_num_handler_82
+int_num_handler_82:
+	movq	$num_handler_str, %rdi
+	movl	$82, %esi
+	callq	panic
+
+	.globl int_num_handler_83
+int_num_handler_83:
+	movq	$num_handler_str, %rdi
+	movl	$83, %esi
+	callq	panic
+
+	.globl int_num_handler_84
+int_num_handler_84:
+	movq	$num_handler_str, %rdi
+	movl	$84, %esi
+	callq	panic
+
+	.globl int_num_handler_85
+int_num_handler_85:
+	movq	$num_handler_str, %rdi
+	movl	$85, %esi
+	callq	panic
+
+	.globl int_num_handler_86
+int_num_handler_86:
+	movq	$num_handler_str, %rdi
+	movl	$86, %esi
+	callq	panic
+
+	.globl int_num_handler_87
+int_num_handler_87:
+	movq	$num_handler_str, %rdi
+	movl	$87, %esi
+	callq	panic
+
+	.globl int_num_handler_88
+int_num_handler_88:
+	movq	$num_handler_str, %rdi
+	movl	$88, %esi
+	callq	panic
+
+	.globl int_num_handler_89
+int_num_handler_89:
+	movq	$num_handler_str, %rdi
+	movl	$89, %esi
+	callq	panic
+
+	.globl int_num_handler_90
+int_num_handler_90:
+	movq	$num_handler_str, %rdi
+	movl	$90, %esi
+	callq	panic
+
+	.globl int_num_handler_91
+int_num_handler_91:
+	movq	$num_handler_str, %rdi
+	movl	$91, %esi
+	callq	panic
+
+	.globl int_num_handler_92
+int_num_handler_92:
+	movq	$num_handler_str, %rdi
+	movl	$92, %esi
+	callq	panic
+
+	.globl int_num_handler_93
+int_num_handler_93:
+	movq	$num_handler_str, %rdi
+	movl	$93, %esi
+	callq	panic
+
+	.globl int_num_handler_94
+int_num_handler_94:
+	movq	$num_handler_str, %rdi
+	movl	$94, %esi
+	callq	panic
+
+	.globl int_num_handler_95
+int_num_handler_95:
+	movq	$num_handler_str, %rdi
+	movl	$95, %esi
+	callq	panic
+
+	.globl int_num_handler_96
+int_num_handler_96:
+	movq	$num_handler_str, %rdi
+	movl	$96, %esi
+	callq	panic
+
+	.globl int_num_handler_97
+int_num_handler_97:
+	movq	$num_handler_str, %rdi
+	movl	$97, %esi
+	callq	panic
+
+	.globl int_num_handler_98
+int_num_handler_98:
+	movq	$num_handler_str, %rdi
+	movl	$98, %esi
+	callq	panic
+
+	.globl int_num_handler_99
+int_num_handler_99:
+	movq	$num_handler_str, %rdi
+	movl	$99, %esi
+	callq	panic
+
+	.globl int_num_handler_100
+int_num_handler_100:
+	movq	$num_handler_str, %rdi
+	movl	$100, %esi
+	callq	panic
+
+	.globl int_num_handler_101
+int_num_handler_101:
+	movq	$num_handler_str, %rdi
+	movl	$101, %esi
+	callq	panic
+
+	.globl int_num_handler_102
+int_num_handler_102:
+	movq	$num_handler_str, %rdi
+	movl	$102, %esi
+	callq	panic
+
+	.globl int_num_handler_103
+int_num_handler_103:
+	movq	$num_handler_str, %rdi
+	movl	$103, %esi
+	callq	panic
+
+	.globl int_num_handler_104
+int_num_handler_104:
+	movq	$num_handler_str, %rdi
+	movl	$104, %esi
+	callq	panic
+
+	.globl int_num_handler_105
+int_num_handler_105:
+	movq	$num_handler_str, %rdi
+	movl	$105, %esi
+	callq	panic
+
+	.globl int_num_handler_106
+int_num_handler_106:
+	movq	$num_handler_str, %rdi
+	movl	$106, %esi
+	callq	panic
+
+	.globl int_num_handler_107
+int_num_handler_107:
+	movq	$num_handler_str, %rdi
+	movl	$107, %esi
+	callq	panic
+
+	.globl int_num_handler_108
+int_num_handler_108:
+	movq	$num_handler_str, %rdi
+	movl	$108, %esi
+	callq	panic
+
+	.globl int_num_handler_109
+int_num_handler_109:
+	movq	$num_handler_str, %rdi
+	movl	$109, %esi
+	callq	panic
+
+	.globl int_num_handler_110
+int_num_handler_110:
+	movq	$num_handler_str, %rdi
+	movl	$110, %esi
+	callq	panic
+
+	.globl int_num_handler_111
+int_num_handler_111:
+	movq	$num_handler_str, %rdi
+	movl	$111, %esi
+	callq	panic
+
+	.globl int_num_handler_112
+int_num_handler_112:
+	movq	$num_handler_str, %rdi
+	movl	$112, %esi
+	callq	panic
+
+	.globl int_num_handler_113
+int_num_handler_113:
+	movq	$num_handler_str, %rdi
+	movl	$113, %esi
+	callq	panic
+
+	.globl int_num_handler_114
+int_num_handler_114:
+	movq	$num_handler_str, %rdi
+	movl	$114, %esi
+	callq	panic
+
+	.globl int_num_handler_115
+int_num_handler_115:
+	movq	$num_handler_str, %rdi
+	movl	$115, %esi
+	callq	panic
+
+	.globl int_num_handler_116
+int_num_handler_116:
+	movq	$num_handler_str, %rdi
+	movl	$116, %esi
+	callq	panic
+
+	.globl int_num_handler_117
+int_num_handler_117:
+	movq	$num_handler_str, %rdi
+	movl	$117, %esi
+	callq	panic
+
+	.globl int_num_handler_118
+int_num_handler_118:
+	movq	$num_handler_str, %rdi
+	movl	$118, %esi
+	callq	panic
+
+	.globl int_num_handler_119
+int_num_handler_119:
+	movq	$num_handler_str, %rdi
+	movl	$119, %esi
+	callq	panic
+
+	.globl int_num_handler_120
+int_num_handler_120:
+	movq	$num_handler_str, %rdi
+	movl	$120, %esi
+	callq	panic
+
+	.globl int_num_handler_121
+int_num_handler_121:
+	movq	$num_handler_str, %rdi
+	movl	$121, %esi
+	callq	panic
+
+	.globl int_num_handler_122
+int_num_handler_122:
+	movq	$num_handler_str, %rdi
+	movl	$122, %esi
+	callq	panic
+
+	.globl int_num_handler_123
+int_num_handler_123:
+	movq	$num_handler_str, %rdi
+	movl	$123, %esi
+	callq	panic
+
+	.globl int_num_handler_124
+int_num_handler_124:
+	movq	$num_handler_str, %rdi
+	movl	$124, %esi
+	callq	panic
+
+	.globl int_num_handler_125
+int_num_handler_125:
+	movq	$num_handler_str, %rdi
+	movl	$125, %esi
+	callq	panic
+
+	.globl int_num_handler_126
+int_num_handler_126:
+	movq	$num_handler_str, %rdi
+	movl	$126, %esi
+	callq	panic
+
+	.globl int_num_handler_127
+int_num_handler_127:
+	movq	$num_handler_str, %rdi
+	movl	$127, %esi
+	callq	panic
+
+	.globl int_num_handler_128
+int_num_handler_128:
+	movq	$num_handler_str, %rdi
+	movl	$128, %esi
+	callq	panic
+
+	.globl int_num_handler_129
+int_num_handler_129:
+	movq	$num_handler_str, %rdi
+	movl	$129, %esi
+	callq	panic
+
+	.globl int_num_handler_130
+int_num_handler_130:
+	movq	$num_handler_str, %rdi
+	movl	$130, %esi
+	callq	panic
+
+	.globl int_num_handler_131
+int_num_handler_131:
+	movq	$num_handler_str, %rdi
+	movl	$131, %esi
+	callq	panic
+
+	.globl int_num_handler_132
+int_num_handler_132:
+	movq	$num_handler_str, %rdi
+	movl	$132, %esi
+	callq	panic
+
+	.globl int_num_handler_133
+int_num_handler_133:
+	movq	$num_handler_str, %rdi
+	movl	$133, %esi
+	callq	panic
+
+	.globl int_num_handler_134
+int_num_handler_134:
+	movq	$num_handler_str, %rdi
+	movl	$134, %esi
+	callq	panic
+
+	.globl int_num_handler_135
+int_num_handler_135:
+	movq	$num_handler_str, %rdi
+	movl	$135, %esi
+	callq	panic
+
+	.globl int_num_handler_136
+int_num_handler_136:
+	movq	$num_handler_str, %rdi
+	movl	$136, %esi
+	callq	panic
+
+	.globl int_num_handler_137
+int_num_handler_137:
+	movq	$num_handler_str, %rdi
+	movl	$137, %esi
+	callq	panic
+
+	.globl int_num_handler_138
+int_num_handler_138:
+	movq	$num_handler_str, %rdi
+	movl	$138, %esi
+	callq	panic
+
+	.globl int_num_handler_139
+int_num_handler_139:
+	movq	$num_handler_str, %rdi
+	movl	$139, %esi
+	callq	panic
+
+	.globl int_num_handler_140
+int_num_handler_140:
+	movq	$num_handler_str, %rdi
+	movl	$140, %esi
+	callq	panic
+
+	.globl int_num_handler_141
+int_num_handler_141:
+	movq	$num_handler_str, %rdi
+	movl	$141, %esi
+	callq	panic
+
+	.globl int_num_handler_142
+int_num_handler_142:
+	movq	$num_handler_str, %rdi
+	movl	$142, %esi
+	callq	panic
+
+	.globl int_num_handler_143
+int_num_handler_143:
+	movq	$num_handler_str, %rdi
+	movl	$143, %esi
+	callq	panic
+
+	.globl int_num_handler_144
+int_num_handler_144:
+	movq	$num_handler_str, %rdi
+	movl	$144, %esi
+	callq	panic
+
+	.globl int_num_handler_145
+int_num_handler_145:
+	movq	$num_handler_str, %rdi
+	movl	$145, %esi
+	callq	panic
+
+	.globl int_num_handler_146
+int_num_handler_146:
+	movq	$num_handler_str, %rdi
+	movl	$146, %esi
+	callq	panic
+
+	.globl int_num_handler_147
+int_num_handler_147:
+	movq	$num_handler_str, %rdi
+	movl	$147, %esi
+	callq	panic
+
+	.globl int_num_handler_148
+int_num_handler_148:
+	movq	$num_handler_str, %rdi
+	movl	$148, %esi
+	callq	panic
+
+	.globl int_num_handler_149
+int_num_handler_149:
+	movq	$num_handler_str, %rdi
+	movl	$149, %esi
+	callq	panic
+
+	.globl int_num_handler_150
+int_num_handler_150:
+	movq	$num_handler_str, %rdi
+	movl	$150, %esi
+	callq	panic
+
+	.globl int_num_handler_151
+int_num_handler_151:
+	movq	$num_handler_str, %rdi
+	movl	$151, %esi
+	callq	panic
+
+	.globl int_num_handler_152
+int_num_handler_152:
+	movq	$num_handler_str, %rdi
+	movl	$152, %esi
+	callq	panic
+
+	.globl int_num_handler_153
+int_num_handler_153:
+	movq	$num_handler_str, %rdi
+	movl	$153, %esi
+	callq	panic
+
+	.globl int_num_handler_154
+int_num_handler_154:
+	movq	$num_handler_str, %rdi
+	movl	$154, %esi
+	callq	panic
+
+	.globl int_num_handler_155
+int_num_handler_155:
+	movq	$num_handler_str, %rdi
+	movl	$155, %esi
+	callq	panic
+
+	.globl int_num_handler_156
+int_num_handler_156:
+	movq	$num_handler_str, %rdi
+	movl	$156, %esi
+	callq	panic
+
+	.globl int_num_handler_157
+int_num_handler_157:
+	movq	$num_handler_str, %rdi
+	movl	$157, %esi
+	callq	panic
+
+	.globl int_num_handler_158
+int_num_handler_158:
+	movq	$num_handler_str, %rdi
+	movl	$158, %esi
+	callq	panic
+
+	.globl int_num_handler_159
+int_num_handler_159:
+	movq	$num_handler_str, %rdi
+	movl	$159, %esi
+	callq	panic
+
+	.globl int_num_handler_160
+int_num_handler_160:
+	movq	$num_handler_str, %rdi
+	movl	$160, %esi
+	callq	panic
+
+	.globl int_num_handler_161
+int_num_handler_161:
+	movq	$num_handler_str, %rdi
+	movl	$161, %esi
+	callq	panic
+
+	.globl int_num_handler_162
+int_num_handler_162:
+	movq	$num_handler_str, %rdi
+	movl	$162, %esi
+	callq	panic
+
+	.globl int_num_handler_163
+int_num_handler_163:
+	movq	$num_handler_str, %rdi
+	movl	$163, %esi
+	callq	panic
+
+	.globl int_num_handler_164
+int_num_handler_164:
+	movq	$num_handler_str, %rdi
+	movl	$164, %esi
+	callq	panic
+
+	.globl int_num_handler_165
+int_num_handler_165:
+	movq	$num_handler_str, %rdi
+	movl	$165, %esi
+	callq	panic
+
+	.globl int_num_handler_166
+int_num_handler_166:
+	movq	$num_handler_str, %rdi
+	movl	$166, %esi
+	callq	panic
+
+	.globl int_num_handler_167
+int_num_handler_167:
+	movq	$num_handler_str, %rdi
+	movl	$167, %esi
+	callq	panic
+
+	.globl int_num_handler_168
+int_num_handler_168:
+	movq	$num_handler_str, %rdi
+	movl	$168, %esi
+	callq	panic
+
+	.globl int_num_handler_169
+int_num_handler_169:
+	movq	$num_handler_str, %rdi
+	movl	$169, %esi
+	callq	panic
+
+	.globl int_num_handler_170
+int_num_handler_170:
+	movq	$num_handler_str, %rdi
+	movl	$170, %esi
+	callq	panic
+
+	.globl int_num_handler_171
+int_num_handler_171:
+	movq	$num_handler_str, %rdi
+	movl	$171, %esi
+	callq	panic
+
+	.globl int_num_handler_172
+int_num_handler_172:
+	movq	$num_handler_str, %rdi
+	movl	$172, %esi
+	callq	panic
+
+	.globl int_num_handler_173
+int_num_handler_173:
+	movq	$num_handler_str, %rdi
+	movl	$173, %esi
+	callq	panic
+
+	.globl int_num_handler_174
+int_num_handler_174:
+	movq	$num_handler_str, %rdi
+	movl	$174, %esi
+	callq	panic
+
+	.globl int_num_handler_175
+int_num_handler_175:
+	movq	$num_handler_str, %rdi
+	movl	$175, %esi
+	callq	panic
+
+	.globl int_num_handler_176
+int_num_handler_176:
+	movq	$num_handler_str, %rdi
+	movl	$176, %esi
+	callq	panic
+
+	.globl int_num_handler_177
+int_num_handler_177:
+	movq	$num_handler_str, %rdi
+	movl	$177, %esi
+	callq	panic
+
+	.globl int_num_handler_178
+int_num_handler_178:
+	movq	$num_handler_str, %rdi
+	movl	$178, %esi
+	callq	panic
+
+	.globl int_num_handler_179
+int_num_handler_179:
+	movq	$num_handler_str, %rdi
+	movl	$179, %esi
+	callq	panic
+
+	.globl int_num_handler_180
+int_num_handler_180:
+	movq	$num_handler_str, %rdi
+	movl	$180, %esi
+	callq	panic
+
+	.globl int_num_handler_181
+int_num_handler_181:
+	movq	$num_handler_str, %rdi
+	movl	$181, %esi
+	callq	panic
+
+	.globl int_num_handler_182
+int_num_handler_182:
+	movq	$num_handler_str, %rdi
+	movl	$182, %esi
+	callq	panic
+
+	.globl int_num_handler_183
+int_num_handler_183:
+	movq	$num_handler_str, %rdi
+	movl	$183, %esi
+	callq	panic
+
+	.globl int_num_handler_184
+int_num_handler_184:
+	movq	$num_handler_str, %rdi
+	movl	$184, %esi
+	callq	panic
+
+	.globl int_num_handler_185
+int_num_handler_185:
+	movq	$num_handler_str, %rdi
+	movl	$185, %esi
+	callq	panic
+
+	.globl int_num_handler_186
+int_num_handler_186:
+	movq	$num_handler_str, %rdi
+	movl	$186, %esi
+	callq	panic
+
+	.globl int_num_handler_187
+int_num_handler_187:
+	movq	$num_handler_str, %rdi
+	movl	$187, %esi
+	callq	panic
+
+	.globl int_num_handler_188
+int_num_handler_188:
+	movq	$num_handler_str, %rdi
+	movl	$188, %esi
+	callq	panic
+
+	.globl int_num_handler_189
+int_num_handler_189:
+	movq	$num_handler_str, %rdi
+	movl	$189, %esi
+	callq	panic
+
+	.globl int_num_handler_190
+int_num_handler_190:
+	movq	$num_handler_str, %rdi
+	movl	$190, %esi
+	callq	panic
+
+	.globl int_num_handler_191
+int_num_handler_191:
+	movq	$num_handler_str, %rdi
+	movl	$191, %esi
+	callq	panic
+
+	.globl int_num_handler_192
+int_num_handler_192:
+	movq	$num_handler_str, %rdi
+	movl	$192, %esi
+	callq	panic
+
+	.globl int_num_handler_193
+int_num_handler_193:
+	movq	$num_handler_str, %rdi
+	movl	$193, %esi
+	callq	panic
+
+	.globl int_num_handler_194
+int_num_handler_194:
+	movq	$num_handler_str, %rdi
+	movl	$194, %esi
+	callq	panic
+
+	.globl int_num_handler_195
+int_num_handler_195:
+	movq	$num_handler_str, %rdi
+	movl	$195, %esi
+	callq	panic
+
+	.globl int_num_handler_196
+int_num_handler_196:
+	movq	$num_handler_str, %rdi
+	movl	$196, %esi
+	callq	panic
+
+	.globl int_num_handler_197
+int_num_handler_197:
+	movq	$num_handler_str, %rdi
+	movl	$197, %esi
+	callq	panic
+
+	.globl int_num_handler_198
+int_num_handler_198:
+	movq	$num_handler_str, %rdi
+	movl	$198, %esi
+	callq	panic
+
+	.globl int_num_handler_199
+int_num_handler_199:
+	movq	$num_handler_str, %rdi
+	movl	$199, %esi
+	callq	panic
+
+	.globl int_num_handler_200
+int_num_handler_200:
+	movq	$num_handler_str, %rdi
+	movl	$200, %esi
+	callq	panic
+
+	.globl int_num_handler_201
+int_num_handler_201:
+	movq	$num_handler_str, %rdi
+	movl	$201, %esi
+	callq	panic
+
+	.globl int_num_handler_202
+int_num_handler_202:
+	movq	$num_handler_str, %rdi
+	movl	$202, %esi
+	callq	panic
+
+	.globl int_num_handler_203
+int_num_handler_203:
+	movq	$num_handler_str, %rdi
+	movl	$203, %esi
+	callq	panic
+
+	.globl int_num_handler_204
+int_num_handler_204:
+	movq	$num_handler_str, %rdi
+	movl	$204, %esi
+	callq	panic
+
+	.globl int_num_handler_205
+int_num_handler_205:
+	movq	$num_handler_str, %rdi
+	movl	$205, %esi
+	callq	panic
+
+	.globl int_num_handler_206
+int_num_handler_206:
+	movq	$num_handler_str, %rdi
+	movl	$206, %esi
+	callq	panic
+
+	.globl int_num_handler_207
+int_num_handler_207:
+	movq	$num_handler_str, %rdi
+	movl	$207, %esi
+	callq	panic
+
+	.globl int_num_handler_208
+int_num_handler_208:
+	movq	$num_handler_str, %rdi
+	movl	$208, %esi
+	callq	panic
+
+	.globl int_num_handler_209
+int_num_handler_209:
+	movq	$num_handler_str, %rdi
+	movl	$209, %esi
+	callq	panic
+
+	.globl int_num_handler_210
+int_num_handler_210:
+	movq	$num_handler_str, %rdi
+	movl	$210, %esi
+	callq	panic
+
+	.globl int_num_handler_211
+int_num_handler_211:
+	movq	$num_handler_str, %rdi
+	movl	$211, %esi
+	callq	panic
+
+	.globl int_num_handler_212
+int_num_handler_212:
+	movq	$num_handler_str, %rdi
+	movl	$212, %esi
+	callq	panic
+
+	.globl int_num_handler_213
+int_num_handler_213:
+	movq	$num_handler_str, %rdi
+	movl	$213, %esi
+	callq	panic
+
+	.globl int_num_handler_214
+int_num_handler_214:
+	movq	$num_handler_str, %rdi
+	movl	$214, %esi
+	callq	panic
+
+	.globl int_num_handler_215
+int_num_handler_215:
+	movq	$num_handler_str, %rdi
+	movl	$215, %esi
+	callq	panic
+
+	.globl int_num_handler_216
+int_num_handler_216:
+	movq	$num_handler_str, %rdi
+	movl	$216, %esi
+	callq	panic
+
+	.globl int_num_handler_217
+int_num_handler_217:
+	movq	$num_handler_str, %rdi
+	movl	$217, %esi
+	callq	panic
+
+	.globl int_num_handler_218
+int_num_handler_218:
+	movq	$num_handler_str, %rdi
+	movl	$218, %esi
+	callq	panic
+
+	.globl int_num_handler_219
+int_num_handler_219:
+	movq	$num_handler_str, %rdi
+	movl	$219, %esi
+	callq	panic
+
+	.globl int_num_handler_220
+int_num_handler_220:
+	movq	$num_handler_str, %rdi
+	movl	$220, %esi
+	callq	panic
+
+	.globl int_num_handler_221
+int_num_handler_221:
+	movq	$num_handler_str, %rdi
+	movl	$221, %esi
+	callq	panic
+
+	.globl int_num_handler_222
+int_num_handler_222:
+	movq	$num_handler_str, %rdi
+	movl	$222, %esi
+	callq	panic
+
+	.globl int_num_handler_223
+int_num_handler_223:
+	movq	$num_handler_str, %rdi
+	movl	$223, %esi
+	callq	panic
+
+	.globl int_num_handler_224
+int_num_handler_224:
+	movq	$num_handler_str, %rdi
+	movl	$224, %esi
+	callq	panic
+
+	.globl int_num_handler_225
+int_num_handler_225:
+	movq	$num_handler_str, %rdi
+	movl	$225, %esi
+	callq	panic
+
+	.globl int_num_handler_226
+int_num_handler_226:
+	movq	$num_handler_str, %rdi
+	movl	$226, %esi
+	callq	panic
+
+	.globl int_num_handler_227
+int_num_handler_227:
+	movq	$num_handler_str, %rdi
+	movl	$227, %esi
+	callq	panic
+
+	.globl int_num_handler_228
+int_num_handler_228:
+	movq	$num_handler_str, %rdi
+	movl	$228, %esi
+	callq	panic
+
+	.globl int_num_handler_229
+int_num_handler_229:
+	movq	$num_handler_str, %rdi
+	movl	$229, %esi
+	callq	panic
+
+	.globl int_num_handler_230
+int_num_handler_230:
+	movq	$num_handler_str, %rdi
+	movl	$230, %esi
+	callq	panic
+
+	.globl int_num_handler_231
+int_num_handler_231:
+	movq	$num_handler_str, %rdi
+	movl	$231, %esi
+	callq	panic
+
+	.globl int_num_handler_232
+int_num_handler_232:
+	movq	$num_handler_str, %rdi
+	movl	$232, %esi
+	callq	panic
+
+	.globl int_num_handler_233
+int_num_handler_233:
+	movq	$num_handler_str, %rdi
+	movl	$233, %esi
+	callq	panic
+
+	.globl int_num_handler_234
+int_num_handler_234:
+	movq	$num_handler_str, %rdi
+	movl	$234, %esi
+	callq	panic
+
+	.globl int_num_handler_235
+int_num_handler_235:
+	movq	$num_handler_str, %rdi
+	movl	$235, %esi
+	callq	panic
+
+	.globl int_num_handler_236
+int_num_handler_236:
+	movq	$num_handler_str, %rdi
+	movl	$236, %esi
+	callq	panic
+
+	.globl int_num_handler_237
+int_num_handler_237:
+	movq	$num_handler_str, %rdi
+	movl	$237, %esi
+	callq	panic
+
+	.globl int_num_handler_238
+int_num_handler_238:
+	movq	$num_handler_str, %rdi
+	movl	$238, %esi
+	callq	panic
+
+	.globl int_num_handler_239
+int_num_handler_239:
+	movq	$num_handler_str, %rdi
+	movl	$239, %esi
+	callq	panic
+
+	.globl int_num_handler_240
+int_num_handler_240:
+	movq	$num_handler_str, %rdi
+	movl	$240, %esi
+	callq	panic
+
+	.globl int_num_handler_241
+int_num_handler_241:
+	movq	$num_handler_str, %rdi
+	movl	$241, %esi
+	callq	panic
+
+	.globl int_num_handler_242
+int_num_handler_242:
+	movq	$num_handler_str, %rdi
+	movl	$242, %esi
+	callq	panic
+
+	.globl int_num_handler_243
+int_num_handler_243:
+	movq	$num_handler_str, %rdi
+	movl	$243, %esi
+	callq	panic
+
+	.globl int_num_handler_244
+int_num_handler_244:
+	movq	$num_handler_str, %rdi
+	movl	$244, %esi
+	callq	panic
+
+	.globl int_num_handler_245
+int_num_handler_245:
+	movq	$num_handler_str, %rdi
+	movl	$245, %esi
+	callq	panic
+
+	.globl int_num_handler_246
+int_num_handler_246:
+	movq	$num_handler_str, %rdi
+	movl	$246, %esi
+	callq	panic
+
+	.globl int_num_handler_247
+int_num_handler_247:
+	movq	$num_handler_str, %rdi
+	movl	$247, %esi
+	callq	panic
+
+	.globl int_num_handler_248
+int_num_handler_248:
+	movq	$num_handler_str, %rdi
+	movl	$248, %esi
+	callq	panic
+
+	.globl int_num_handler_249
+int_num_handler_249:
+	movq	$num_handler_str, %rdi
+	movl	$249, %esi
+	callq	panic
+
+	.globl int_num_handler_250
+int_num_handler_250:
+	movq	$num_handler_str, %rdi
+	movl	$250, %esi
+	callq	panic
+
+	.globl int_num_handler_251
+int_num_handler_251:
+	movq	$num_handler_str, %rdi
+	movl	$251, %esi
+	callq	panic
+
+	.globl int_num_handler_252
+int_num_handler_252:
+	movq	$num_handler_str, %rdi
+	movl	$252, %esi
+	callq	panic
+
+	.globl int_num_handler_253
+int_num_handler_253:
+	movq	$num_handler_str, %rdi
+	movl	$253, %esi
+	callq	panic
+
+	.globl int_num_handler_254
+int_num_handler_254:
+	movq	$num_handler_str, %rdi
+	movl	$254, %esi
+	callq	panic
+
+	.globl int_num_handler_255
+int_num_handler_255:
+	movq	$num_handler_str, %rdi
+	movl	$255, %esi
+	callq	panic
+
+
+
+	.data
+num_handler_str:
+	.asciz "Unhandled [0x%lx] interrupt"

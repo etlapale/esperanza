@@ -1,0 +1,72 @@
+                           Esperanza µ-kernel
+
+  Welcome to the new version of the Esperanza project.
+  Esperanza will one day be an operating system based on a small µ-kernel.
+
+
+  *Requirements*
+
+    A standard compilation suite (gcc, binutils, make, a shell, ...).
+    Python interpreter for some utility scripts.
+    Genext2fs or Mtools to create virtual disks.
+    Bochs or Qemu if you want to make a simulation.
+    GRUB to load the system.
+    An IA32 or AMD64 cpu to do real tests.
+
+
+  *Quick test*
+
+    If you want to build and try the kernel quickly, you can just type:
+
+        make test
+
+
+  *Configuration*
+
+    The first step is to configure the kernel (and system) you want to
+  build. You do this with one of the configuration script. For now, there
+  is only one configuration script, configure.py, a ncurses based Python
+  script. To do this simply type :
+
+       	make menuconfig
+  
+    After that, a `config.h' file is generated and you can simply use make
+  to build the system :
+
+        make
+
+
+  *Try*
+
+    A simple `make test' should work.
+
+    You need to use GRUB (or any multiboot compliant boot loader) to load
+  the kicker which will find the kernel module and load it. As an example,
+  here is a simple GRUB config:
+
+        title=Esperanza
+
+	root (hd0,0)
+       	kernel /esperanza/kicker/kicker
+       	module /esperanza/kernel/kernel
+	module /esperanza/console/console
+
+
+  *Learn*
+
+    You can find more info of course in the sources, but also on the
+  Esperanza website at http://esperanza.next-touch.com
+  
+
+  *Contribute*
+
+    Your help is really welcome :) If you want to contribute to the project
+  for example by develop new components, port it to another architecture or
+  translate the documentation, contact us at esperanza@next-touch.com and/or
+  consult the TODO file in the main directory.
+
+
+  *License*
+
+    Esperanza is released under the CeCCIL license. See LICENSE for the
+  full license in english, LICENCE for the license in french.

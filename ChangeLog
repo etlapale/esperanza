@@ -1,0 +1,104 @@
+2011-11-14  Xīcò  <xico@atelo.org>
+
+	* Git repository.
+
+2006-05-24  Xīcò  <xico@atelo.org>
+
+	* Everything is okay for the IA32 implementation.
+
+2006-05-23  Xīcò  <xico@atelo.org>
+
+	* Many bugs solved for the AMD64 syscall/sysret mechanism.
+	* Darcs repository removed.
+
+2006-05-20  Xīcò  <xico@atelo.org>
+
+	* servers/console/src/console.c: Starting the console driver.
+
+2006-02-04  Xīcò  <xico@atelo.org>
+
+	* kernel/src/_init.c: Memory map provided in the KIP for sigma0.
+
+2006-02-02  Xīcò  <xico@atelo.org>
+
+	* kicker/src/mmu.c: AMD64 GDT size bug solved.
+
+2006-02-01  Xīcò  <xico@atelo.org>
+
+	* kicker/src/interrupts.c: Slow ThreadControl system call for IA32.
+
+2006-01-31  Xīcò  <xico@atelo.org>
+
+	* kernel/src/syscall.S: Added a syscall handler for AMD64.
+	
+	* kernel/src/thread.c: Thread deletion started, exit() implemented
+	in the servers.
+
+2006-01-30  Xīcò  <xico@atelo.org>
+
+	* kernel/src/printf.c: Pointer format (%p) added replacing FADDR.
+	
+	* CeCILL is the new project licence (compatible with the GPL).
+
+2006-01-29  Xīcò  <xico@atelo.org>
+
+	* kernel/src/btmalloc.c: btalloc replaces malloc.
+
+2006-01-25  Xīcò  <xico@atelo.org>
+
+	* kernel/src/_init.c: Removed stack management.
+
+	* kernel/src/clock.S: Ticks counter implemented.
+
+	* kernel/src/kip.c: KIP page created (Kernel Interface Page).
+
+2006-01-22  Xīcò  <xico@atelo.org>
+
+	* kernel/src/_idle.c: User-level stack for server threads.
+	
+2006-01-21  Xīcò  <xico@atelo.org>
+
+	* kernel/src/memory.c (associate_page): Map a physical page
+	at the given virtual address.
+
+2006-01-20  Xīcò  <xico@atelo.org>
+
+	* Servers build and test support added.
+
+2006-01-19  Xīcò  <xico@atelo.org>
+
+	* kernel/src/thread.c: Support for AMD64 threads.
+
+2005-11-22  Xīcò  <xico@atelo.org>
+
+	* scripts/test.py: Failback on genext2fs or mtools
+	* scripts/test.py: Search with `locate' added
+
+2005-11-21  Xīcò  <xico@atelo.org>
+
+	* IA32 threads implemented.
+	
+2005-11-17  Xīcò  <xico@atelo.org>
+
+	* kernel/src/printf.c: Long support added.
+
+2005-11-17  Xīcò  <xico@atelo.org>
+
+	* Clock frequency is now configurable
+
+2005-11-16  Xīcò  <xico@atelo.org>
+
+	* scripts/test.py: Test script created.
+
+2005-11-12  Xīcò  <xico@atelo.org>
+
+	* scripts/configure.py: Configurator created.
+	* scripts/configurable.xml: Configurable file for Esperanza.
+	
+2005-11-09  Xīcò  <xico@atelo.org>
+
+	* kicker: IA-32 support.
+
+2005-11-07  Xīcò  <xico@atelo.org>
+
+	* Intial release.

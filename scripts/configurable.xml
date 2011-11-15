@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configurable>
+
+  <title>Esperanza 0.0.0 Configuration</title>
+  <description>
+    Allow the user to configure the Esperanza system to be built.
+    Select an option with up/down, an action with left/right,
+    confirm by pressing Enter. Use Escape as a shortcut.
+  </description>
+
+  <configurable>
+    <title>Processor type and features</title>
+    <description>
+      Define the system architecture running Esperanza.
+    </description>
+
+    <choose>
+      <title>Processor family</title>
+      <option id="CPU_AMD64">AMD64</option>
+      <option id="CPU_IA32" default="yes">IA32</option>
+    </choose>
+    
+    <option id="IA32_PSE" require="CPU_IA32" default="yes">
+      Page size extension
+    </option>
+
+    <choose>
+      <title>Timer frequency</title>
+      <option id="TIMER_FREQ_100" default="yes">100 Hz</option>
+      <option id="TIMER_FREQ_250">250 Hz</option>
+      <option id="TIMER_FREQ_500">500 Hz</option>
+      <option id="TIMER_FREQ_1000">1000 Hz</option>
+    </choose>
+
+  </configurable>
+
+  <configurable>
+    <title>Debugging options</title>
+    <description>
+      Define the debugging options.
+    </description>
+
+    <option id="BOCHS_DEBUG" default="yes">
+      Bochs debugging output (via 0xe9 port).
+    </option>
+
+    <option id="SCREEN_DEBUG" default="yes">
+      Display debugging output on screen.
+    </option>
+
+    <option id="COM1_DEBUG">
+      Send debugging output to serial line.
+    </option>
+  </configurable>
+
+</configurable>

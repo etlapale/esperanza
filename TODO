@@ -1,0 +1,16 @@
+[Code]
+
+  * Check all the TODO: BUG: and FIXME: notices.
+
+[Documentation]
+
+  * Website translation and automatic maintenance (PHP?).
+
+[Build system]
+
+  * Switch to scons or jam?
+  * Allow string values in configure.py.
+
+[Kicker]
+
+  * Allow relocatable kernels/servers?
