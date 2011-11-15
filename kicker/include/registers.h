@@ -49,7 +49,7 @@ wrmsr (uint32_t reg, uint32_t val)
 {
   asm volatile ("wrmsr"
                 :
-                : "a" (val), "c" (reg));
+                : "a" (val), "d" (0), "c" (reg));
 }
 
 inline void __attribute__((always_inline))

@@ -291,6 +291,9 @@ init_mmu (uint32_t kload_addr, uint32_t elf_header)
   
   /* Enable long mode */
   msr_set (MSR_EFER, MSR_EFER_LME);
+  /*asm volatile ("wrmsr"
+		:
+		: "a" (MSR_EFER_LME | MSR_EFER_SCE), "c" (MSR_EFER), "d" (0));*/
 
   /* TODO: add a compilation option for that */
 
