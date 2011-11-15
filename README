@@ -55,18 +55,18 @@
   *Learn*
 
     You can find more info of course in the sources, but also on the
-  Esperanza website at http://esperanza.next-touch.com
+  Esperanza website at http://esperanza.atelo.org
   
 
   *Contribute*
 
     Your help is really welcome :) If you want to contribute to the project
   for example by develop new components, port it to another architecture or
-  translate the documentation, contact us at esperanza@next-touch.com and/or
+  translate the documentation, contact us at xico@atelo.org and/or
   consult the TODO file in the main directory.
 
 
   *License*
 
-    Esperanza is released under the CeCCIL license. See LICENSE for the
-  full license in english, LICENCE for the license in french.
+    Esperanza is released under the GPLv3+ license. See COPYING for the
+  full license in English.
