@@ -224,12 +224,9 @@ def configureTest (options) :
     if searchCommand (emul) == None :
       sys.exit ('Could not found the bochs emulator')
     b = open ('.esperanza_bochsrc', 'w')
-    b.write ('''
-config_interface: textconfig
+    b.write ('''config_interface: textconfig
 display_library: x
-romimage: file=$BXSHARE/BIOS-bochs-latest, address=0xf0000
 megs: 64
-vgaromimage: file=$BXSHARE/VGABIOS-elpin-2.40
 floppya: 1_44="''' + options.image + '''", status=inserted
 boot: floppy
 cpu: ips=10000000
@@ -258,7 +255,7 @@ def runTest (options) :
   modules = listModules('servers/list')
   for mod in modules :
     copyFile ('servers/' + mod + '/' + mod, options.image, options.type)
-  #os.system ("bash " + options.config)
+  os.system ("bash " + options.config)
 
 
 # Entry point

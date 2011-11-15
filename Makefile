@@ -14,12 +14,6 @@ kernel kicker: config.h
 servers: config.h
 	@for name in `cat servers/list`; do $(MAKE) -C servers/$$name; done
 
-symlinks:
-	sh scripts/restore_types.sh 2>/dev/null
-
-dumplinks:
-	sh scripts/dump_types.sh > scripts/restore_types.sh
-
 config.h:
 	if [ ! -e "$@" ] ; then $(MAKE) menuconfig; fi
 
