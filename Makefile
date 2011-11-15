@@ -36,4 +36,4 @@ test: all
 
 distclean: clean
 	$(RM) -fr config.h .esperanza* .testconf .grubconf *.img \
-		 `find . -type l` `find . -name semantic.cache`
+		 `find . -name semantic.cache`

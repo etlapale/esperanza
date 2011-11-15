@@ -11,6 +11,7 @@ init_printf (void);
 void __attribute__ ((format (printf, 1, 2)))
 printf (const char *format, ...);
 
+
 typedef unsigned char scancode_t;
 
 void

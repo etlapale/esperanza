@@ -1,1 +1,1 @@
-../../kicker/include/stdarg.h
+../../kernel/include/stdarg.h

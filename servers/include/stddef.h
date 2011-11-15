@@ -1,1 +1,1 @@
-../../kicker/include/stddef.h
+../../kernel/include/stddef.h

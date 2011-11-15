@@ -19,7 +19,7 @@ receive (int port)
 			"\tpopl %%ebp\n"
 			: "=a" (__result)
 			: "d" (port)
-			: "ebp");
+			: /*"ebp"*/);
 #elif defined CONFIG_CPU_AMD64
   __asm__ __volatile__ ("pushq %%rcx\n"
 			"\tpushq %%r11\n"
