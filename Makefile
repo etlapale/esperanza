@@ -49,7 +49,7 @@ $(BOCHSRC):
 	echo 'boot: floppy' >> $@
 
 install_img: $(VIMG) kernel kicker servers
-	$(MMD) -D s a:/esperanza
+	-$(MMD) -D s a:/esperanza
 	$(MCOPY) -o kicker/kicker a:/esperanza
 	$(MCOPY) -o kernel/kernel a:/esperanza
 	for name in `cat servers/list`; do \
