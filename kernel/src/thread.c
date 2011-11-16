@@ -182,11 +182,11 @@ schedule (void)
 {
   old_thread = current_thread;
 
+  /* Search the next running thread */
   do
-    {
-      current_thread = current_thread->next;
-    }
-  while (current_thread != old_thread && current_thread->state != THREAD_RUNNING);
+    current_thread = current_thread->next;
+  while (current_thread != old_thread
+	 && current_thread->state != THREAD_RUNNING);
   
   current_thread->counter = DEFAULT_THREAD_PRIORITY;
 
@@ -198,13 +198,27 @@ schedule (void)
     }
 
   /* Switch */
-  /*printf ("Switching from 0x%lx to 0x%lx\n",
-    (unsigned long) old_thread, (unsigned long) current_thread);*/
+  printf ("Switching from 0x%lx (%s) to 0x%lx (%s)\n",
+    (unsigned long) old_thread, old_thread->name,
+    (unsigned long) current_thread, current_thread->name);
   software_task_switch (old_thread, current_thread);
 }
 
+char *
+strncpy (char* dest, const char* src, size_t n)
+{
+  size_t i;
+
+  for (i = 0; i < n && src[i] != '\0'; i++)
+    dest[i] = src[i];
+  for ( ; i < n; i++)
+    dest[i] = '\0';
+
+  return dest;
+}
+
 thread_t *
-new_thread (uintptr_t ip, int level, uintptr_t address_space)
+new_thread (const char* name, uintptr_t ip, int level, uintptr_t address_space)
 {
   uintptr_t kstack;
   uintptr_t *ptr;
@@ -216,6 +230,17 @@ new_thread (uintptr_t ip, int level, uintptr_t address_space)
   thread_t *t = (thread_t *) bt_alloc (thread_allocator);
   t->ksp_base = kstack + DEFAULT_PAGE_SIZE;
   t->ksp = t->ksp_base;
+
+  /* Store the thread name */
+  if (name == NULL)
+    {
+      t->name[0] = '\0';
+    }
+  else 
+    {
+      strncpy (t->name, name, MAX_THREAD_NAME);
+      t->name[MAX_THREAD_NAME-1] = '\0';
+    }
   
   /* Process schedule informations */
   t->counter = DEFAULT_THREAD_PRIORITY;
@@ -239,7 +264,7 @@ new_thread (uintptr_t ip, int level, uintptr_t address_space)
       current_thread->prev = t;
     }
   
-  printf ("\tNew thread: %p (CR3: %p)\n", t, (void *) t->cr3);
+  printf ("\tNew thread: %p [%s] (CR3: %p)\n", t, t->name, (void *) t->cr3);
   return t;
 }
 

@@ -52,7 +52,8 @@ init (struct Kicker_Info *kicker_info)
   /* Create the first thread (the idle thread) */
   printf ("Kernel thread as cr3: 0x%x\n", kicker_info->cr3);
   current_thread = NULL;
-  current_thread = new_thread ((uintptr_t) idle, KERNEL_LEVEL,
+  current_thread = new_thread ("idle",
+			       (uintptr_t) idle, KERNEL_LEVEL,
 			       kicker_info->cr3);
   /* Insert it in the list */
   current_thread->next = current_thread;
@@ -77,7 +78,8 @@ init (struct Kicker_Info *kicker_info)
 	      module->start, module->end);
       
       /* TODO: ELF-loader for the servers */
-      thread_t *t = new_thread (DEFAULT_LOAD_ADDRESS,
+      thread_t *t = new_thread ((const char*) (void*) module->string,
+				DEFAULT_LOAD_ADDRESS,
 				USER_LEVEL, EMPTY_ADDRESS_SPACE);
 
       uint32_t addr;

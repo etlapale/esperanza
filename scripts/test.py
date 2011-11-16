@@ -1,7 +1,7 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # Create a virtual disk
-# Authors: Tuna & Neil for Esperanza
+# Authors: Tuna & Xīcò for Esperanza
 
 
 import os, sys, shutil
@@ -82,7 +82,7 @@ def checkMtoolsrc (floppy) :
 
 # Copy a file from real fs to the virtual disk
 def copyFile (src, floppy, tool) :
-  print 'Copying %s into %s with %s' % (src, floppy, tool)
+  print('Copying %s into %s with %s' % (src, floppy, tool))
   
   if tool == 'mtools' :
     checkMtoolsrc (floppy)
@@ -181,33 +181,33 @@ def createGrubFloppy (options) :
       createGrubConf (options.grubconf)
   
   if options.verbose :
-    print "Creating an empty disk on " + options.image
+    print("Creating an empty disk on " + options.image)
   createFloppy (options.image)
   
   if options.verbose :
-    print 'Formatting the disk'
+    print('Formatting the disk')
   formatFloppy (options.image, options.type)
 
   if options.verbose :
-    print 'Installing GRUB'
+    print('Installing GRUB')
   installGrubOnFloppy (options.image, options.type, options.grubconf)
 
 
 # Ask the user to choose an option on the console
 def askUser (question, choices, default) :
-  print question
-  while True :
-    print 'Please choose one of:',
+  print(question)
+  while True:
+    print("Please choose one of: ", end='')
     for c in choices :
-      print c,
-    print '[' + default + ']', 
-    ans = raw_input ().strip ()
+      print(c, end=' ')
+    print('[' + default + ']', end=' ')
+    ans = input ().strip ()
     if len (ans) == 0 :
       return default
     for c in choices :
       if c == ans :
         return ans
-    print 'Unacceptable answer'
+    print('Unacceptable answer')
     
 
 # Configure the test
@@ -223,17 +223,8 @@ def configureTest (options) :
   if emul == 'bochs' :
     if searchCommand (emul) == None :
       sys.exit ('Could not found the bochs emulator')
-    b = open ('.esperanza_bochsrc', 'w')
-    b.write ('''config_interface: textconfig
-display_library: x
-megs: 64
-floppya: 1_44="''' + options.image + '''", status=inserted
-boot: floppy
-cpu: ips=10000000
-log: -
-''')
-    b.close ()
-    f.write ('bochs -qf .esperanza_bochsrc\n')
+    f.write("bochs -q 'floppya: 1_44=\"%s\", status=inserted' 'boot:a'"
+        % options.image)
   
   elif emul == 'qemu' :
     if searchCommand (emul) == None :
@@ -284,13 +275,13 @@ def main () :
   # Search for the tools (either genext2fs or mtools)
   if options.type == 'genext2fs' and searchCommand ('genext2fs') == None :
     if options.verbose :
-      print 'genext2fs not found, trying mtools'
+      print('genext2fs not found, trying mtools')
     options.type = 'mtools'
     if searchCommand ('mformat') == None :
       sys.exit ('Neither genext2fs nor mtools where found')
   if options.type == 'mtools' and searchCommand ('mformat') == None :
     if options.verbose :
-      print 'mtools not found, trying genext2fs'
+      print('mtools not found, trying genext2fs')
     options.type = 'genext2fs'
     if searchCommand ('genext2fs') == None :
       sys.exit ('Neither genext2fs nor mtools where found')

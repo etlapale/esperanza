@@ -14,6 +14,7 @@
 #define THREAD_SENDING 2
 #define THREAD_RECEIVING 3
 #define THREAD_DEAD 4
+#define MAX_THREAD_NAME 32
 
 /**
  * Kernel thread structure.
@@ -43,6 +44,9 @@ typedef struct thread_t
 
   /** Thread state. (IA32: +28, AMD64: +56) */
   int state;
+
+  /** Thread name. (IA32: +32, AMD64: +60) */
+  char name[MAX_THREAD_NAME];
 } __attribute__((packed)) thread_t;
 
 
@@ -65,9 +69,12 @@ schedule (void);
 
 /**
  * Create a new thread.
+ *
+ * \param name Thread name as a null-terminated string with less than
+ *             MAX_THREAD_NAME characters.
  */
 thread_t *
-new_thread (uintptr_t ip, int level, uintptr_t address_space);
+new_thread (const char* name, uintptr_t ip, int level, uintptr_t address_space);
 
 
 /**

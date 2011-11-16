@@ -27,7 +27,7 @@ STRIP = strip
 M4 = m4
 
 # Compilation flags: warn, no default
-CFLAGS = -W -Winline -Wall -Werror -Wno-unused \
+CFLAGS = -W -Winline -Wall -Wno-unused \
 	-fno-builtin -nostdinc -nostdlib -ffreestanding -pipe
 AFLAGS =
 LDFLAGS = -N -nostdlib -Ttext $(KERNEL_START) --entry=init
