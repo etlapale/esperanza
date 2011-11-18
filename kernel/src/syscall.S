@@ -71,7 +71,7 @@ _listen_on:
 	movq	%rbx, (%rdx)
 	/* Set state to THREAD_RECEIVING */
 	movq	current_thread, %rax
-	movq	$3, 56(%rax)
+	movl	$3, 56(%rax)
 	
 	/* Switch to another thread */
 	pushq	%rax

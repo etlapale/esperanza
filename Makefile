@@ -37,7 +37,7 @@ clean:
 	@echo "Everything clean"
 
 config menuconfig:
-	$(PYTHON) ./scripts/configure.py ./scripts/configurable.xml
+	./scripts/configure.py ./scripts/configurable.xml
 
 test: all install_img $(BOCHSRC)
 	bochs -qf $(BOCHSRC)

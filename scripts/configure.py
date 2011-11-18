@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2
 # -*- coding: utf-8 -*-
 # This is the Esperanza configurator
 # Usage: ./configure.py [configurable [output [prefix]]]
