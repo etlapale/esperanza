@@ -102,8 +102,9 @@ uint32_t kernel_page_table;
 #endif /* CONFIG_IA32_SYSENTER */
 #elif defined CONFIG_CPU_AMD64
 #define software_task_switch(old_thread, new_thread)     \
-    __asm__ __volatile__ ("pushq  $0               \n\t" \
-                          "pushq  %%rsp            \n\t" \
+    __asm__ __volatile__ ("movq   $0x10,    -8(%%rsp)\n\t" \
+			  "movq   %%rsp,   -16(%%rsp)\n\t" \
+			  "subq   $16, %%rsp\n\n"\
 			  "pushfq                  \n\t" \
                           "pushq  $0x08            \n\t" \
                           "pushq  $1f              \n\t" \

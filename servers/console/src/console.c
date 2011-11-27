@@ -24,7 +24,9 @@ main (void)
   printf ("Esperanza console starting!\n");
   
   for (;;)
-    keyboard_listener (receive (KEYBOARD_PORT));
+    ;
+    //__asm__ __volatile__ ("hlt");
+    //keyboard_listener (receive (KEYBOARD_PORT));
   
   return 0;
 }

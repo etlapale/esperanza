@@ -16,7 +16,7 @@ int_handler_clock:
 
 	/* Decrement the current_thread counter */
 	movl	current_thread, %eax
-	decl	(%eax)
+	decq	(%eax)
 	jnz	1f
 
 	/* Counter is now equals to zero, schedule */
