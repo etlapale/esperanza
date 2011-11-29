@@ -1,17 +1,12 @@
 [Code]
-
-  * Make the code running.
   * Check all the TODO: BUG: and FIXME: notices.
 
 [Documentation]
-
   * Website translation and automatic maintenance.
 
 [Build system]
-
   * Switch to autoconf or something else.
   * Allow string values in configure.py.
 
 [Kicker]
-
   * Allow relocatable kernels/servers?
