@@ -199,9 +199,9 @@ schedule (void)
     }
 
   /* Switch */
-  printf ("Switching from 0x%lx (%s) to 0x%lx (%s)\n",
+  /*printf ("Switching from 0x%lx (%s) to 0x%lx (%s)\n",
     (unsigned long) old_thread, old_thread->name,
-    (unsigned long) current_thread, current_thread->name);
+    (unsigned long) current_thread, current_thread->name);*/
   software_task_switch (old_thread, current_thread);
 }
 

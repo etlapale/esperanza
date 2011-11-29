@@ -45,6 +45,7 @@ test: all install_img $(BOCHSRC)
 $(BOCHSRC):
 	echo 'display_library: x' > $@
 	echo 'megs: 64' >> $@
+	echo 'port_e9_hack: enabled=1' >> $@
 	echo 'floppya: 1_44="$(VIMG)", status=inserted' >> $@
 	echo 'boot: floppy' >> $@
 

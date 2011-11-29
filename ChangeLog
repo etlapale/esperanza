@@ -1,3 +1,6 @@
+2011-11-26  Xīcò  <xico@atelo.org>
+	* Fixing task switch, kernel works again.
+
 2011-11-14  Xīcò  <xico@atelo.org>
 
 	* Git repository.
@@ -77,7 +80,7 @@
 2005-11-21  Xīcò  <xico@atelo.org>
 
 	* IA32 threads implemented.
-	
+
 2005-11-17  Xīcò  <xico@atelo.org>
 
 	* kernel/src/printf.c: Long support added.

@@ -19,14 +19,15 @@ uint32_t multiboot_magic;
 multiboot_info_t *multiboot_info;
 extern uint32_t idle_cr3;
 
+/* Contains the segment and address of the kernel */
+static struct { uint32_t addr; uint16_t seg; } ksegaddr;
+
 int
 main (uintptr_t heap_addr, uintmax_t heap_size)
 {
   struct Boot_Module *modules;
   /* Kicker information passed to the kernel */
   struct Kicker_Info *info;
-  /* Contains the segment and address of the kernel */
-  struct { uint32_t addr; uint16_t seg; } ksegaddr;
 
   /* Init the print-on-screen function */
   init_printf ();
@@ -44,6 +45,7 @@ main (uintptr_t heap_addr, uintmax_t heap_size)
     panic ("Not a multiboot bootloader");
 
   info = (struct Kicker_Info *) malloc (sizeof (struct Kicker_Info));
+  printf ("Kicker info allocated at 0x%x\n", (uint32_t) (void*) info);
 
   /* Save the modules (loaded by the bootloader) informations */
   modules = save_modules_info (multiboot_info, info);
@@ -54,6 +56,8 @@ main (uintptr_t heap_addr, uintmax_t heap_size)
   /* Load the kernel */
   ksegaddr.seg = 0x08;
   ksegaddr.addr = load_kernel (modules);
+  printf ("Ksegaddr at 0x%x [0x%x,0x%x]\n",
+	  (uint32_t) (void*) &ksegaddr, ksegaddr.seg, ksegaddr.addr);
 
   /* Init the Memory Management Unit */
   init_mmu (ksegaddr.addr, modules->start);
@@ -77,11 +81,13 @@ main (uintptr_t heap_addr, uintmax_t heap_size)
 
   /* Switch the kernel */
 #ifdef CONFIG_CPU_IA32
-  __asm__ __volatile__ ("pushl %0; pushl $0" :: "m" (info));
+  /*__asm__ __volatile__ ("pushl %0; pushl $0; ljmp *%1"
+			:: "m"(info), "m"(ksegaddr));*/
+  __asm__ __volatile__ ("pushl %0; pushl $0" :: "m"(info));
 #elif defined CONFIG_CPU_AMD64
   __asm__ __volatile__ ("movl %0, %%edi" :: "m" (info));
 #endif
-  __asm__ __volatile__ ("ljmp *%0\n\t" :: "m"(ksegaddr));
+  __asm__ __volatile__ ("ljmp *%0" :: "m"(ksegaddr));
 
   return 0;
 }
