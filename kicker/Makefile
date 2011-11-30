@@ -23,7 +23,7 @@ STRIP = strip
 # Compilation flags: warn as much as possible, no default, 32bits
 CFLAGS = -W -Winline -Wall -Wno-unused -Werror \
 	-nostdinc -nostdlib -fno-builtin -ffreestanding \
-	-m32 -pipe -finline-functions
+	-m32 -pipe -finline-functions -mno-sse
 AFLAGS = --32
 LDFLAGS = -nostdlib -Ttext $(KICKER_START) -melf_i386
 

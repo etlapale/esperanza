@@ -81,9 +81,7 @@ main (uintptr_t heap_addr, uintmax_t heap_size)
 
   /* Switch the kernel */
 #ifdef CONFIG_CPU_IA32
-  /*__asm__ __volatile__ ("pushl %0; pushl $0; ljmp *%1"
-			:: "m"(info), "m"(ksegaddr));*/
-  __asm__ __volatile__ ("pushl %0; pushl $0" :: "m"(info));
+  __asm__ __volatile__ ("pushl %0; pushl $0" :: "m" (info));
 #elif defined CONFIG_CPU_AMD64
   __asm__ __volatile__ ("movl %0, %%edi" :: "m" (info));
 #endif

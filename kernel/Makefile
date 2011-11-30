@@ -28,7 +28,7 @@ M4 = m4
 
 # Compilation flags: warn, no default
 CFLAGS = -W -Winline -Wall -Wno-unused \
-	-fno-builtin -nostdinc -nostdlib -ffreestanding -pipe
+	-fno-builtin -nostdinc -nostdlib -ffreestanding -pipe -mno-sse
 AFLAGS =
 LDFLAGS = -N -nostdlib -Ttext $(KERNEL_START) --entry=init
 
