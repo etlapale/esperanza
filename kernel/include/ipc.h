@@ -2,6 +2,7 @@
 #define __IPC_H
 
 #include <stddef.h>
+#include <string.h>
 #include <thread.h>
 #include <thread-bits.h>
 
@@ -69,20 +70,38 @@ ipc (thread_id_t to, from_specifier_t specifier,
 			: "=a"(mr0), "=S"(rfrom)
 			: "S"(to), "d"(specifier)
 			: "rcx", "r11");
-/*asm volatile ("pushq	%%rbp		;\
-	       movq	$0xface, %%rbp	;\
-	       syscall			;\
-	       popq	%%rbp		;\
-	       popq	%%rbp		;\
-	       movq     %%r9, %1	;\
-              "
-	      : "=m"(mr0)
-	      : "d"(specifier),"S"(to)
-	      : "r9");*/
 #endif
   if (from != NULL)
     *from = rfrom;
   return mr0;
+}
+
+#define NORMAL_IPC 0
+#define PROPAGATED_IPC 1
+
+static inline void __attribute__((always_inline))
+ipc_send_bytes (thread_id_t to, unsigned long label, const void* data, size_t len)
+{
+#ifdef CONFIG_CPU_IA32
+#error "IA32::IPC NYI"
+#elif defined CONFIG_CPU_AMD64
+  register unsigned long mr0 asm("r9") = (label << 16) | (0 << 13) | (NORMAL_IPC << 12)
+    | (1 << 6) | (0);
+  asm volatile ("\tpushq %%rbp\n"
+                "\tmovq $0x03, %%rbp\n"
+		"\tsyscall\n"
+		"\tpopq %%rbp\n"
+		: "=a"(mr0)
+		: "r"(mr0), "a"(data), "S"(to), "d"(NIL_THREAD)
+		: "rcx", "r11");
+#endif
+}
+
+static inline void __attribute__((always_inline))
+ipc_send_string (thread_id_t to, unsigned long label, const char* str)
+{
+  size_t len = strlen (str);
+  ipc_send_bytes (to, label, str, len);
 }
 
 #endif

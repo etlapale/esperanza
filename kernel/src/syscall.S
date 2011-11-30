@@ -128,6 +128,23 @@ _ipc:
 	je	_ipc_recv
 _ipc_send:
 	/* Search for the destination */
+	movq	current_thread, %rbx
+1:
+	cmpq	%rsi, 100(%rbx)
+	je 	1f
+	movq	32(%rbx), %rbx
+	cmpq	%rbx, current_thread
+	jne	1b
+	/* Thread not found */
+	movq	$ipc_send_tnf_str, %rdi
+	/*movq	%rbp, %rsi
+	movq	(%rsp), %rdx*/
+	call	panic
+1:	/* Thread found */
+	movl	$THREAD_RUNNING, 56(%rbx)
+	movq	current_thread, %rax
+	movq	100(%rax), %rbp
+	movq	%rbp, 92(%rbx)
 	
 _ipc_recv:
 	/* Check if we receive something */
@@ -135,7 +152,7 @@ _ipc_recv:
 	je	_syscall_exit
 	/* Set state to THREAD_IPC_RCV */
 	movq	current_thread, %rax
-	movl	$5, 56(%rax)
+	movl	$THREAD_IPC_RCV, 56(%rax)
 	/* Switch to another thread */
 	pushq	%rax
 	pushq	%rcx
@@ -164,4 +181,5 @@ _syscall_exit:
 	
 	.data
 	
-bad_sys_str:	.asciz "Bad syscall: 0x%x @0x%lx"
+bad_sys_str:		.asciz "Bad syscall: 0x%x @0x%lx"
+ipc_send_tnf_str:	.asciz "Destination thread not found"

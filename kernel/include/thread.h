@@ -2,19 +2,12 @@
 #define __THREAD_H
 
 #include <stdint.h>
+#include <thread-bits.h>
 
 #define KERNEL_LEVEL 0
 #define USER_LEVEL 1
 
 #define EMPTY_ADDRESS_SPACE 0
-
-/** Thread states. */
-#define THREAD_STOPPED 0
-#define THREAD_RUNNING 1
-#define THREAD_SENDING 2
-#define THREAD_RECEIVING 3
-#define THREAD_DEAD 4
-#define THREAD_IPC_RCV 5
 
 #define MAX_THREAD_NAME 32
 

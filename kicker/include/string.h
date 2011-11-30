@@ -2,6 +2,7 @@
 #define __STRING_H
 
 #include <stddef.h>
+#include <stdint.h>
 
 
 /**

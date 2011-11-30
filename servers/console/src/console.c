@@ -26,9 +26,8 @@ main (void)
     {
       msg_tag_t mr0;
       thread_id_t from;
-      mr0 = ipc (0xcafe, 0xbabe, 0x42, &from);
-      printf("IPC returned: 0x%lx\n", mr0);
-      printf("%d\n", 0x123);
+      mr0 = ipc (NIL_THREAD, 0xbabe, 0x42, &from);
+      printf("IPC message from : 0x%lx\n", from);
     }
   
   for (;;)
