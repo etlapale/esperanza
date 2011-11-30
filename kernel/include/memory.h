@@ -67,13 +67,7 @@
 #define PAGE_USER_RO (PAGE_USER_LEVEL | PAGE_PRESENT)
 #define PAGE_USER_RW (PAGE_USER_LEVEL | PAGE_READ_WRITE | PAGE_PRESENT)
 
-
-#ifdef CONFIG_CPU_IA32
-#define KIP_VIRTUAL_ADDRESS 0x400000
-#else /* CONFIG_CPU_AMD64 */
-#define KIP_VIRTUAL_ADDRESS 0x200000
-#endif
-
+#include <thread-bits.h>
 
 typedef struct memory_chunk
 {

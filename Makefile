@@ -76,7 +76,9 @@ $(GRUBCONF):
 	echo 'root (fd0)' >> $@
 	echo 'kernel /esperanza/kicker' >> $@
 	echo 'module /esperanza/kernel' >> $@
-	echo 'module /esperanza/console' >> $@
+	for name in `cat servers/list`; do \
+		echo "module /esperanza/$$name" >> $@ ; \
+	done
 
 $(MTOOLSRC):
 	echo 'drive a: file="$(VIMG)" 1.44M filter' > $@

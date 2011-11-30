@@ -1,5 +1,6 @@
 	.text
 	
+#include <thread-bits.h>
 #ifdef CONFIG_CPU_IA32
 
 	.globl	syscall_0x80
@@ -49,10 +50,23 @@ _listen_on:
 	.globl	syscall_handler
 	
 syscall_handler:
-	pushfq
+	/**
+	 * Only the two first KB of the UTCB are used by L4.
+	 * We use +2048-+3192 for syscall kernel stack, and data.
+	 * TODO: Do not use %r15.
+	 */
+	movq	$UTCB_VIRTUAL_ADDRESS, %r15
+	movq	%rsp, 8(%r15)
+	movq	%rcx, 16(%r15)
+	addq	$3192, %r15
+	movq	%r15, %rsp
+
+	/*pushfq*/
 	
 	cmpq	$0x02, %rbp
 	je	_listen_on
+	cmpq	$0x03, %rbp
+	je	_ipc
 	
 	/* Unknown syscall */
 	movq	$bad_sys_str, %rdi
@@ -76,7 +90,6 @@ _listen_on:
 	/* Switch to another thread */
 	pushq	%rax
 	pushq	%rcx
-	pushq	%rdx
 	pushq	%rsi
 	pushq	%rdi
 	pushq	%r9
@@ -88,7 +101,6 @@ _listen_on:
 	popq	%r9
 	popq	%rdi
 	popq	%rsi
-	popq	%rdx
 	popq	%rcx
 	popq	%rax
 	
@@ -98,7 +110,54 @@ _listen_on:
 	popq	%rdx
 	popq	%rbx
 
-	popfq
+	jmp	_syscall_exit
+
+_ipc:
+	/*
+	 * Input:
+	 *     rsi	to
+	 *     rdx	from_specifier
+	 *     r8	timeout
+	 *
+	 * Output:
+	 *     rsi	from
+	 */
+
+	/* Check if a send phase is included */
+	cmpq	$NIL_THREAD, %rsi
+	je	_ipc_recv
+_ipc_send:
+	/* Search for the destination */
+	
+_ipc_recv:
+	/* Check if we receive something */
+	cmpq	$NIL_THREAD, %rdx
+	je	_syscall_exit
+	/* Set state to THREAD_IPC_RCV */
+	movq	current_thread, %rax
+	movl	$5, 56(%rax)
+	/* Switch to another thread */
+	pushq	%rax
+	pushq	%rcx
+	pushq	%rdi
+	pushq	%r9
+	pushq	%r10
+	pushq	%r11
+	call	schedule
+	popq	%r11
+	popq	%r10
+	popq	%r9
+	popq	%rdi
+	popq	%rcx
+	popq	%rax
+	/* Store sender id in %rsi */
+	movq	92(%rax), %rsi
+
+_syscall_exit:
+	movq	$UTCB_VIRTUAL_ADDRESS, %r15
+	movq	8(%r15), %rsp
+	movq	16(%r15), %rcx
+	/*popfq*/
 	sysretq
 #endif
 

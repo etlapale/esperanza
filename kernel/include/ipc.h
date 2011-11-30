@@ -1,10 +1,13 @@
 #ifndef __IPC_H
 #define __IPC_H
 
+#include <stddef.h>
+#include <thread.h>
+#include <thread-bits.h>
+
 #define KEYBOARD_PORT 0x21
 #define MAX_PORT_COUNT 0x100
 
-typedef unsigned long thread_id_t;
 typedef unsigned long from_specifier_t;
 typedef unsigned long word_t;
 typedef unsigned long msg_tag_t;
@@ -49,6 +52,7 @@ ipc (thread_id_t to, from_specifier_t specifier,
      word_t timeouts, thread_id_t* from)
 {
   msg_tag_t mr0 = 123;
+  thread_id_t rfrom;
 
 #ifdef CONFIG_CPU_IA32
 #error "IA32::IPC NYI"
@@ -62,8 +66,8 @@ ipc (thread_id_t to, from_specifier_t specifier,
 			"\tpopq %%rbp\n"
 			"\tpopq %%r11\n"
 			"\tpopq %%rcx\n"
-			: "=a" (mr0)
-			: "d" (to)
+			: "=a"(mr0), "=S"(rfrom)
+			: "S"(to), "d"(specifier)
 			: "rcx", "r11");
 /*asm volatile ("pushq	%%rbp		;\
 	       movq	$0xface, %%rbp	;\
@@ -76,6 +80,8 @@ ipc (thread_id_t to, from_specifier_t specifier,
 	      : "d"(specifier),"S"(to)
 	      : "r9");*/
 #endif
+  if (from != NULL)
+    *from = rfrom;
   return mr0;
 }
 

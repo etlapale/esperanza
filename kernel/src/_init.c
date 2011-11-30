@@ -49,12 +49,13 @@ init (struct Kicker_Info *kicker_info)
   /* Create the thread structures allocator */
   thread_allocator = bt_create_allocator (get_pm_page, free_memory,
 					  DEFAULT_PAGE_SIZE, sizeof (thread_t));
-  /* Create the first thread (the idle thread) */
+  /* Create the first (kernel) thread (the idle thread) */
   printf ("Kernel thread as cr3: 0x%x\n", kicker_info->cr3);
   current_thread = NULL;
   current_thread = new_thread ("idle",
 			       (uintptr_t) idle, KERNEL_LEVEL,
 			       kicker_info->cr3);
+  current_thread->global_id = 0; // Not referenceable
   /* Insert it in the list */
   current_thread->next = current_thread;
   current_thread->prev = current_thread;
@@ -81,6 +82,7 @@ init (struct Kicker_Info *kicker_info)
       thread_t *t = new_thread ((const char*) (void*) module->string,
 				DEFAULT_LOAD_ADDRESS,
 				USER_LEVEL, EMPTY_ADDRESS_SPACE);
+      t->global_id = i;
 
       uint32_t addr;
       for (addr = module->start; addr < module->end; addr += DEFAULT_PAGE_SIZE)
@@ -93,6 +95,7 @@ init (struct Kicker_Info *kicker_info)
 	}
 
       /* Map the VIDEO page (0xb8000) at 0xb8b8000 for the console */
+      // TODO: only do that on demand, for only the console
       associate_page (t->cr3, 0xb8b8000, 0xb8000 | PAGE_USER_RW);
     }
 

@@ -1,0 +1,8 @@
+#ifndef __ESPERANZA_THREAD_BIT_H
+#define __ESPERANZA_THREAD_BIT_H
+
+#define NIL_THREAD 0
+
+#define UTCB_VIRTUAL_ADDRESS 0x200000
+
+#endif

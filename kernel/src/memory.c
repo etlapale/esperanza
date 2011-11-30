@@ -198,8 +198,8 @@ get_memory (uintmax_t size)
           chunk->next = memory_chunks;
           memory_chunks->prev = chunk;
 
-          printf ("\tAllocating memory at %p\n",
-		  (void *) chunk->address);
+          printf ("\tAllocating memory at %p (size: 0x%lx bytes)\n",
+		  (void *) chunk->address, size);
           return (void *) chunk->address;;
         }
     }

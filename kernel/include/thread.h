@@ -14,7 +14,11 @@
 #define THREAD_SENDING 2
 #define THREAD_RECEIVING 3
 #define THREAD_DEAD 4
+#define THREAD_IPC_RCV 5
+
 #define MAX_THREAD_NAME 32
+
+typedef unsigned long thread_id_t;
 
 /**
  * Kernel thread structure.
@@ -47,6 +51,18 @@ typedef struct thread_t
 
   /** Thread name. (IA32: +32, AMD64: +60) */
   char name[MAX_THREAD_NAME];
+
+  /** Sender of last message (IA32: +64, AMD64: +92) */
+  thread_id_t from;
+
+  /** Global thread id (IA32: +68, AMD64: +100) */
+  thread_id_t global_id;
+
+  /** Local thread id (IA32: +72, AMD64: +108) */
+  thread_id_t local_id;
+
+  /** UTCB page (IA32: +76, AMD64: +116) */
+  uintptr_t utcb_page;
 } __attribute__((packed)) thread_t;
 
 

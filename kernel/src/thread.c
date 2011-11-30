@@ -199,9 +199,9 @@ schedule (void)
     }
 
   /* Switch */
-  /*printf ("Switching from 0x%lx (%s) to 0x%lx (%s)\n",
-    (unsigned long) old_thread, old_thread->name,
-    (unsigned long) current_thread, current_thread->name);*/
+  printf ("Switching from 0x%lx (%s:%ld) to 0x%lx (%s:%ld)\n",
+    (unsigned long) old_thread, old_thread->name, old_thread->global_id,
+    (unsigned long) current_thread, current_thread->name, current_thread->global_id);
   software_task_switch (old_thread, current_thread);
 }
 
@@ -252,6 +252,10 @@ new_thread (const char* name, uintptr_t ip, int level, uintptr_t address_space)
     t->cr3 = create_address_space ();
   else
     t->cr3 = address_space;
+
+  // Setup the UTCB
+  uintptr_t utcb_page = (uintptr_t) get_memory (DEFAULT_PAGE_SIZE);
+  associate_page (t->cr3, UTCB_VIRTUAL_ADDRESS, utcb_page | PAGE_USER_RW);
 
   /* Init the kernel stack for first context switch */
   setup_kernel_stack (t, ip, level);
